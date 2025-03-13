@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bubble Clicker</title>
     <style>
-        /* Предыдущие стили без изменений */
         * {
             margin: 0;
             padding: 0;
@@ -128,16 +127,8 @@
             e.target.remove();
             score++;
             scoreElement.textContent = `Score: ${score}`;
-            
-            // Воспроизведение звука
             clickSound.currentTime = 0;
             clickSound.play();
-            
-            // Вибрация (добавлено)
-            if (navigator.vibrate) {
-                navigator.vibrate(50); // 50ms vibration
-            }
-
             createBubble();
         }
 
